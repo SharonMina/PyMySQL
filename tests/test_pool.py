@@ -27,7 +27,7 @@ def insert(mcp):
 
 import time
 
-def test(add_n = 0):
+def common(add_n = 0):
     mcp = pymysql.pool.MySQLConnPool(host, user, passwd, db, size=size)
 
     task_threads = []
@@ -39,7 +39,8 @@ def test(add_n = 0):
     for i in range(size):
         task_threads[i].join()
 
-if __name__ == '__main__':
-    # test()
+def test_a():
+    test()
+
+def test_b():
     test(100)
-    # test(2)
